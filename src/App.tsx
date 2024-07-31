@@ -1,19 +1,16 @@
-import { useState } from 'react';
 import { ContentContainer } from './components';
-import { SimpleStoreContext } from './store/simpleStore';
+// import { SimpleProvider } from './store/simpleStore';
+import { FastProvider } from './store/fastStore';
 
 export const App: React.FC = () => {
-  const store = useState({
-    first: '',
-    last: '',
-  });
-
   return (
-    <SimpleStoreContext.Provider value={store}>
+    // <SimpleProvider>
+    <FastProvider>
       <div className='container'>
         <h5>App</h5>
         <ContentContainer />
       </div>
-    </SimpleStoreContext.Provider>
+    </FastProvider>
+    // </SimpleProvider>
   );
 };
