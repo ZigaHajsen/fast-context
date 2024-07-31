@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { ContentContainer } from './components';
-import { StoreContext } from './store';
+import { StoreContext } from './store/simpleStore';
 
 export const App: React.FC = () => {
   const store = useState({
