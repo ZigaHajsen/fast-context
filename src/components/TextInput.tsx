@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import { StoreContext } from '../store/simpleStore';
+import { SimpleStoreContext } from '../store/simpleStore';
 
 export const TextInput: React.FC<{ value: 'first' | 'last' }> = ({ value }) => {
-  const [store, setStore] = useContext(StoreContext)!;
+  const [store, setStore] = useContext(SimpleStoreContext)!;
 
   return (
     <div className='field'>

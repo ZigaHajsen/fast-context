@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import { StoreContext } from '../store/simpleStore';
+import { SimpleStoreContext } from '../store/simpleStore';
 
 export const Display: React.FC<{ value: 'first' | 'last' }> = ({ value }) => {
-  const [store] = useContext(StoreContext)!;
+  const [store] = useContext(SimpleStoreContext)!;
 
   return (
     <div className='value'>

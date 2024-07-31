@@ -1,6 +1,6 @@
 import { createContext, useState } from 'react';
 
-const useStoreData = () => {
+const useSimpleStoreData = () => {
   const store = useState({
     first: '',
     last: '',
@@ -9,6 +9,7 @@ const useStoreData = () => {
   return store;
 };
 
-type UseStoreDataReturnType = ReturnType<typeof useStoreData>;
+type UseSimpleStoreDataReturnType = ReturnType<typeof useSimpleStoreData>;
 
-export const StoreContext = createContext<UseStoreDataReturnType | null>(null);
+export const SimpleStoreContext =
+  createContext<UseSimpleStoreDataReturnType | null>(null);
